@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+import Occurrence from '../components/Occurrences/Occurrence';
 
 const Occurrences = () => {
     const { data, error } = useSWR('/api/occurrences');
@@ -7,7 +8,9 @@ const Occurrences = () => {
         return (
             <p>Error: { error.toString() }</p>
         )
-    } else if (data) {
+    }
+
+    if (data) {
         const { occurrences } = data;
 
         return (
@@ -16,19 +19,17 @@ const Occurrences = () => {
                 {
                     occurrences.map((occurrence) => {
                         return (
-                            <div key={ occurrence.name }>
-                                <p>{ occurrence.kind }</p>
-                            </div>
+                           <Occurrence occurrence={occurrence}/>
                         )
                     })
                 }
             </>
         )
-    } else {
-        return (
-            <h1>here with nothing</h1>
-        )
     }
+
+    return (
+        <p>Loading...</p>
+    )
 }
 
 export default Occurrences;

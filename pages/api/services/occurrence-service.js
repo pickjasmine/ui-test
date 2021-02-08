@@ -13,3 +13,17 @@ export const getOccurrences = async () => {
 
     return response.json();
 };
+
+export const getOccurrenceByOccurrenceId = async (occurrenceId) => {
+    const occurrencesUrl = `${ getBaseUrl() }/v1beta1/projects/${ process.env.PROJECT_ID }/occurrences/${occurrenceId}`;
+
+    const response = await fetch(occurrencesUrl);
+
+    if (response.status !== 200) {
+        return {
+            occurrence: null
+        };
+    }
+
+    return response.json();
+}
