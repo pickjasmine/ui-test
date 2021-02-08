@@ -1,0 +1,41 @@
+.occurrence {
+    padding: 0.25rem 1rem 0.5rem;
+    margin: 2rem 1rem;
+    border-left: solid 3px black;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+    &:hover {
+        background-color: #f6f6f6;
+    }
+
+    > h1 {
+        font-weight: bold;
+        border-bottom: solid 1px black;
+        width: fit-content;
+        margin-bottom: 0.5rem;
+    }
+
+    > p {
+        color: #404040;
+        padding: 0 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.discovery {
+    composes: occurrence;
+    border-color: #0070f3;
+
+    > h1 {
+        border-bottom: solid 1px #0070f3;
+    }
+}
+
+.vulnerability {
+    composes: occurrence;
+    border-color: #cf0c0c;
+
+    > h1 {
+        border-bottom: solid 1px #cf0c0c;
+    }
+}
