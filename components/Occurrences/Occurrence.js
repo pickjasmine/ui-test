@@ -22,7 +22,7 @@ const getOccurrenceDetails = (occurrence) => {
 const Occurrence = ({ occurrence }) => {
     return (
         <div key={ occurrence.name } className={styles[occurrence.kind.toLowerCase()]}>
-            <h1>{ occurrence.kind }</h1>
+            <h2>{ occurrence.kind }</h2>
             <p>Name: { occurrence.name }</p>
             <p>URI: { occurrence.resource.uri }</p>
             { getOccurrenceDetails(occurrence) }

@@ -8,7 +8,7 @@
         background-color: #f6f6f6;
     }
 
-    > h1 {
+    > h2 {
         font-weight: bold;
         border-bottom: solid 1px black;
         width: fit-content;
@@ -26,7 +26,7 @@
     composes: occurrence;
     border-color: #0070f3;
 
-    > h1 {
+    > h2 {
         border-bottom: solid 1px #0070f3;
     }
 }
@@ -35,7 +35,7 @@
     composes: occurrence;
     border-color: #cf0c0c;
 
-    > h1 {
+    > h2 {
         border-bottom: solid 1px #cf0c0c;
     }
 }
